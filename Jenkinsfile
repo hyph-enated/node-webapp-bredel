@@ -4,7 +4,9 @@ pipeline {
 
     stage('Dockerize') {
       steps {
-        docker.build('image').run('-p 3000:3000')
+        script {
+          docker.build('image').run('-p 3000:3000')
+        }
       }
     }
   }
