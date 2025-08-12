@@ -1,5 +1,5 @@
 pipeline {
-    agent { linux-node }
+    agent any
 
     options {
         timestamps()
