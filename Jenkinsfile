@@ -4,7 +4,7 @@
         stages {
             stage('Checkout Code') {
                 steps {
-                    https://github.com/hyph-enated/node-webapp-bredel.git
+                    git https://github.com/hyph-enated/node-webapp-bredel.git
                 }
             }
             stage('Build Docker Image') {
