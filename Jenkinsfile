@@ -1,10 +1,11 @@
-
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:22.18.0-alpine3.22' }
+    }
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
-                sh 'docker build -t image-1 .'
+                sh 'node --eval "console.log(process.platform,process.env.CI)"'
             }
         }
     }
