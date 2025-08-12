@@ -1,9 +1,6 @@
 pipeline {
     agent {
-        docker {
-            image 'linux-node'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-        }
+        linux-node
     }
 
     options {
